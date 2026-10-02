@@ -15,8 +15,6 @@ jobs:
         uses: fx31337/mql-compile-action@master
         with:
           include: .
-          init-platform: true
-          mt-version: 5.0.0.2515
           path: GBPUSD_Bot.mq5
           verbose: true
 

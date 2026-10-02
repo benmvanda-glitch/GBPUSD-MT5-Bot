@@ -12,12 +12,12 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Compile MQL5
-        uses: fx31337/mql-compile-action@v2
+        uses: fx31337/mql-compile-action@master
         with:
-          path: GBPUSD_Bot.mq5
           include: .
           init-platform: true
           mt-version: 5.0.0.2515
+          path: GBPUSD_Bot.mq5
           verbose: true
 
       - name: List compiled files

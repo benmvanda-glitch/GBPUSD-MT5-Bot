@@ -1,7 +1,5 @@
 name: GBPUSD Bot
 
-name: GBPUSD Bot
-
 on:
   workflow_dispatch:
 

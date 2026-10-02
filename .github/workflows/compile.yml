@@ -11,8 +11,23 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Compile
-        shell: pwsh
+      - name: Compile MQL5
+        uses: fx31337/mql-compile-action@master
+        with:
+          include: .
+          init-platform: true
+          mt-version: 5.0.0.2515
+          path: GBPUSD_Bot.mq5
+          verbose: true
+
+      - name: List compiled files
+        shell: powershell
         run: |
-          Write-Host "Checking repository..."
-          Get-ChildItem -Recurse
+          Get-ChildItem -Recurse -Filter *.ex5
+
+      - name: Upload EX5
+        uses: actions/upload-artifact@v4
+        with:
+          name: GBPUSD_Bot_EX5
+          path: '**/*.ex5'
+          if-no-files-found: error

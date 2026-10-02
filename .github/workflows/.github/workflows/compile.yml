@@ -1,4 +1,4 @@
-name: GBPUSD Bot
+name: compile GBPUSD Bot
 
 on:
   workflow_dispatch:

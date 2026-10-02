@@ -1,0 +1,2 @@
+# GBPUSD-MT5-Bot
+GBP/USD MT5 Trading Bot

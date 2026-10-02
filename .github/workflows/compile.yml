@@ -1,6 +1,6 @@
 name: GBPUSD Bot
 
-
+on:
   workflow_dispatch:
 
 jobs:

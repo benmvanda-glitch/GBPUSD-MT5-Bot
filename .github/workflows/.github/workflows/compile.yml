@@ -1,5 +1,7 @@
 name: GBPUSD Bot
 
+name: GBPUSD Bot
+
 on:
   workflow_dispatch:
 
@@ -12,10 +14,12 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Compile MQL5
-        uses: fx31337/mql-compile-action@master
+        uses: fx31337/mql-compile-action@v2
         with:
-          include: .
           path: GBPUSD_Bot.mq5
+          include: .
+          init-platform: true
+          mt-version: 5.0.0.2515
           verbose: true
 
       - name: List compiled files
